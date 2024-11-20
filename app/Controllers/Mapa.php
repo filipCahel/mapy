@@ -16,5 +16,6 @@ class Mapa extends BaseController
         $cesta="https://eartquake.usgs.gov/earthquakes/feed/v1.0/summary/significat_month.geojson";
         $soubor=file_get_contents($cesta);
         $data["soubor"]=$soubor;
+        return view("zemetreseni", $data);
     }
 }
